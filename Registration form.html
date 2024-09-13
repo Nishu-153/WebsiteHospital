@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Registration Form</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/236x/c7/bb/a9/c7bba917189f2c49e341099df40f4260.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    
+    <h1>Hospital Registration Form</h1>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="first-name">First Name<span class="required">*</span>:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name<span class="required">*</span>:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="dob">Date of Birth<span class="required">*</span>:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender<span class="required">*</span>:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>--Select Gender--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="phone">Phone Number<span class="required">*</span>:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="address">Home Address<span class="required">*</span>:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Medical Information</legend>
+
+            <label for="blood-group">Blood Group<span class="required">*</span>:</label>
+            <select id="blood-group" name="blood-group" required>
+                <option value="" disabled selected>--Select Blood Group--</option>
+                <option value="A+">A<sup>+</sup></option>
+                <option value="A-">A<sup>-</sup></option>
+                <option value="B+">B<sup>+</sup></option>
+                <option value="B-">B<sup>-</sup></option>
+                <option value="AB+">AB<sup>+</sup></option>
+                <option value="AB-">AB<sup>-</sup></option>
+                <option value="O+">O<sup>+</sup></option>
+                <option value="O-">O<sup>-</sup></option>
+            </select>
+
+            <label for="allergies">Allergies:</label>
+            <textarea id="allergies" name="allergies" rows="3"></textarea>
+
+            <label for="conditions">Existing Medical Conditions:</label>
+            <textarea id="conditions" name="conditions" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Emergency Contact</legend>
+
+            <label for="emergency-name">Contact Name<span class="required">*</span>:</label>
+            <input type="text" id="emergency-name" name="emergency-name" required>
+
+            <label for="emergency-phone">Contact Phone<span class="required">*</span>:</label>
+            <input type="tel" id="emergency-phone" name="emergency-phone" required>
+
+            <label for="relationship">Relationship<span class="required">*</span>:</label>
+            <input type="text" id="relationship" name="relationship" required>
+        </fieldset>
+ 
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
