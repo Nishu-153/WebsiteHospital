@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Page</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/236x/c7/bb/a9/c7bba917189f2c49e341099df40f4260.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .nav-icons .icon {
+            margin: 0 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Form Styles */
+        #checkout-form {
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #checkout-form label, 
+        #checkout-form input, 
+        #checkout-form textarea, 
+        #checkout-form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #checkout-form button {
+            background-color: rgb(1, 22, 104);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #checkout-form button:hover {
+            background-color: rgb(0, 18, 85);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Adjusts layout for smaller screens */
+            gap: 20px;
+        }
+
+        .footer-left {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-left img {
+            max-width: 100px;
+        }
+
+        .footer-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-social {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #0078ff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <img src="https://i.pinimg.com/236x/c7/bb/a9/c7bba917189f2c49e341099df40f4260.jpg" alt="Logo" class="Logo">
+            <ul class="nav-menu">
+                <a href="Home page.html">Home</a>
+                <a href="About us page.html">About us</a>
+                <a href="Services page.html">Services</a>
+                <a href="Doctors page.html">Doctors</a>
+                <a href="Consulting reservation page.html">Consulting reservations</a>
+                <a href="Pharmacy page.html">Pharmacy</a>
+            </ul>
+            <div class="nav-icons">
+                <div class="icon mail-icon">&#9993;</div>
+                <div class="icon phone-icon">&#9742;</div>
+            </div>
+        </nav>
+    </header>
+
+    <form id="checkout-form" onsubmit="submitOrder(); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="card-number">Card Number:</label>
+        <input type="int" id="card-number" name="card-number"  required>
+
+        <label for="expiry">Expiry Date:</label>
+        <input type="month" id="expiry" name="expiry" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="int" id="cvv" name="cvv"  required>
+
+        <button type="submit">Pay Now</button>
+    </form>
+
+
+
+    <script>
+        function submitOrder() {
+            alert("Thank you for your purchase! Your order will be delivered on " + new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000).toDateString());
+            window.location.href ="Pharmacy page.html"
+        }
+    </script>
+</body>
+</html>

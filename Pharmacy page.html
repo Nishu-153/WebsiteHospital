@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Pharmacy Page</title>
     <link rel="shortcut icon" href="https://i.pinimg.com/236x/c7/bb/a9/c7bba917189f2c49e341099df40f4260.jpg" type="image/x-icon">
     <link rel="stylesheet" href="Style.css">
     <style>
@@ -14,9 +14,8 @@
     <header class="header">
         <nav class="navbar">
             <img src="https://i.pinimg.com/236x/c7/bb/a9/c7bba917189f2c49e341099df40f4260.jpg" alt="Logo" class="Logo">
-            
             <ul class="nav-menu">
-                <a href="index.html">Home</a>
+                <a href="Home page.html">Home</a>
                 <a href="About us page.html">About us</a>
                 <a href="Services page.html">Services</a>
                 <a href="Doctors page.html">Doctors</a>
@@ -28,80 +27,209 @@
                 <div class="icon phone-icon">&#9742;</div>
             </div>
         </nav>
-
-
     </header>
 
-    <main class="main-content">
-        <section class="pharmacy-form-section">
-            <h2>PHARMACY</h2>
-            <form class="pharmacy-form">
-                <div class="form-group">
-                    <label for="patientName">Name of the patient</label>
-                    <input type="text" id="patientName" name="patientName">
+    <center>
+        <section id="categories">
+            <h2>Medicine Categories</h2>
+            <div>
+                <h3>Analgesics</h3>
+                <div class="medicine-item">
+                    <label>Panadol ($2): </label>
+                    <input type="number" id="panadolQty" min="0">
+                    <button onclick="addToCart('Panadol', 2, 'panadolQty')">Add to Cart</button>
+                </div>
+                 <div class="medicine-item">
+                    <label>Ibuprofen ($5): </label>
+                    <input type="number" id="ibuprofenQty" min="0">
+                    <button onclick="addToCart('Ibuprofen', 5, 'ibuprofenQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Morphine ($1.5): </label>
+                    <input type="number" id="morphineQty" min="0">
+                    <button onclick="addToCart('Morphine', 1.5, 'morphineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Hydrocodone ($2.5): </label>
+                    <input type="number" id="hydrocodoneQty" min="0">
+                    <button onclick="addToCart('Hydrocodone', 2.5, 'hydrocodoneQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Fentanyl ($3): </label>
+                    <input type="number" id="fentanylQty" min="0">
+                    <button onclick="addToCart('Fentanyl', 3, 'fentanylQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Codeine ($4): </label>
+                    <input type="number" id="codeinelQty" min="0">
+                    <button onclick="addToCart('Codeine', 3, 'codeinelQty')">Add to Cart</button>
                 </div>
 
-                <div class="form-group">
-                    <label for="contactNumber">Contact Number</label>
-                    <input type="tel" id="contactNumber" name="contactNumber">
+            </div>
+            <div>
+                <h3>Antibiotics</h3>
+                <div class="medicine-item">
+                    <label>Amoxcilin ($2.75): </label>
+                    <input type="number" id="amoxcilinlQty" min="0">
+                    <button onclick="addToCart('Amoxcilin', 2.75, 'amoxcilinlQty')">Add to Cart</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="email" id="emailAddress" name="emailAddress">
+                <div class="medicine-item">
+                    <label>Penicilin ($1.9): </label>
+                    <input type="number" id="penicilinQty" min="0">
+                    <button onclick="addToCart('Penicilin', 1.9, 'penicilinQty')">Add to Cart</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="medicationName">Name of the Medication</label>
-                    <select id="medicationName" name="medicationName">
-                        <option value="">Select Medication</option>
-                        <option value="med1">Panadol</option>
-                        <option value="med2">Pirton</option>
-                        <option value="med3">Morphine</option>
-                        <option value="med4">Omega-3</option>
-                        <option value="med4">Biotin</option>
-                        <option value="med4">Mobic</option>
-                        <option value="med4">Motrin</option>
-
-
-                    </select>
+                <div class="medicine-item">
+                    <label>Doxycycline ($2.5): </label>
+                    <input type="number" id="doxycyclineQty" min="0">
+                    <button onclick="addToCart('Doxycycline', 2.5, 'doxycyclineQty')">Add to Cart</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="quantity">Quantity</label>
-                    <select id="quantity" name="quantity">
-                        <option value="">Select Quantity</option>
-                        <option value="1">1 card</option>
-                        <option value="2">2 cards</option>
-                        <option value="3">3 cards</option>
-                        <option value="4">4 cards</option>
-                        <option value="5">5 cards</option>
-                    </select>
+                <div class="medicine-item">
+                    <label>Ciprofloxacin ($3): </label>
+                    <input type="number" id="ciprofloxacinQty" min="0">
+                    <button onclick="addToCart('Ciprofloxacin', 3, 'ciprofloxacinQty')">Add to Cart</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="dosage">Dosage</label>
-                    <select id="dosage" name="dosage">
-                        <option value="">Select Dosage</option>
-                        <option value="50mg">50mg</option>
-                        <option value="100mg">100mg</option>
-                        <option value="100mg">500mg</option>
-                    </select>
+                <div class="medicine-item">
+                    <label>Erythromycin ($3.1): </label>
+                    <input type="number" id="codeinelQty" min="0">
+                    <button onclick="addToCart('Codeine', 3.1, 'codeinelQty')">Add to Cart</button>
                 </div>
-
-                <div class="form-group">
-                    <label for="paymentMethod">Payment method</label>
-                    <select id="paymentMethod" name="paymentMethod">
-                        <option value="">Select Payment Method</option>
-                        <option value="creditCard">Visa</option>
-                        <option value="cash">Mastercard</option>
-                        <option value="insurance">Cash</option>
-                    </select>
+                <div class="medicine-item">
+                    <label>Clindamycin ($2): </label>
+                    <input type="number" id="clindamycinQty" min="0">
+                    <button onclick="addToCart('Clindamycin', 2, 'clindamycinQty')">Add to Cart</button>
                 </div>
-
-                <div class="form-buttons">
-                    <button type="submit" class="submit-btn">Submit</button>
-                    <button type="reset" class="reset-btn">Reset</button>
+            </div>
+            <div>
+                <h3>Antidepressants</h3>
+                <div class="medicine-item">
+                    <label>Fluoxetine ($2): </label>
+                    <input type="number" id="fluoxetineQty" min="0">
+                    <button onclick="addToCart('Fluoxetine', 2, 'fluoxetineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Sertraline ($2.2): </label>
+                    <input type="number" id="sertralineQty" min="0">
+                    <button onclick="addToCart('Sertraline', 2.2, 'sertralineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Bupropion ($2): </label>
+                    <input type="number" id="bupropionQty" min="0">
+                    <button onclick="addToCart('Bupropion', 2, 'bupropionQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Mirtazapine ($1.7): </label>
+                    <input type="number" id="mirtazapineQty" min="0">
+                    <button onclick="addToCart('Mirtazapine', 1.7, 'mirtazapineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Nortriptyline ($1.9): </label>
+                    <input type="number" id="nortriptylineQty" min="0">
+                    <button onclick="addToCart('Nortriptyline', 1.9, 'nortriptylineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Mirtazapine ($1.4): </label>
+                    <input type="number" id="mirtazapineQty" min="0">
+                    <button onclick="addToCart('Mirtazapine', 1.4, 'mirtazapineQty')">Add to Cart</button>
+                </div>
+            </div>
+            <div>
+                <h3>Antihistamines</h3>
+                <div class="medicine-item">
+                    <label>Cetirizine ($1.6): </label>
+                    <input type="number" id="cetirizineQty" min="0">
+                    <button onclick="addToCart('Cetirizine', 1.6, 'cetirizineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Hydroxyzine ($3.4): </label>
+                    <input type="number" id="hydroxyzineQty" min="0">
+                    <button onclick="addToCart('Hydroxyzine', 1.4, 'hydroxyzineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Loratadine ($2.3): </label>
+                    <input type="number" id="loratadineQty" min="0">
+                    <button onclick="addToCart('Loratadine', 2.3, 'loratadineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Hydroxyzine ($1.4): </label>
+                    <input type="number" id="hydroxyzineQty" min="0">
+                    <button onclick="addToCart('Hydroxyzine', 1.4, 'hydroxyzineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Meclizine (2.7): </label>
+                    <input type="number" id="meclizineQty" min="0">
+                    <button onclick="addToCart('Meclizine', 2.7, 'eclizineQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Promethazine (2.3): </label>
+                    <input type="number" id="promethazine Qty" min="0">
+                    <button onclick="addToCart('Promethazine ', 2.3, 'promethazineQty')">Add to Cart</button>
+                </div>
+                
+            </div>
+            <div>
+                <h3>Antihypertensives</h3>
+                <div class="medicine-item">
+                    <label>Atenolol (1.7): </label>
+                    <input type="number" id="atenololQty" min="0">
+                    <button onclick="addToCart('Atenolol', 1.7, 'atenololQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Metoprolol ($4.4): </label>
+                    <input type="number" id="metoprololQty" min="0">
+                    <button onclick="addToCart('Metoprolol', 4.4, 'metoprololQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Furosemide ($6.9): </label>
+                    <input type="number" id="furosemideQty" min="0">
+                    <button onclick="addToCart('Furosemide', 6.9, 'furosemideQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Losartan ($2.8): </label>
+                    <input type="number" id="losartanQty" min="0">
+                    <button onclick="addToCart('Losartan', 2.8, 'losartanQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Valsartan ($0.9): </label>
+                    <input type="number" id="valsartanQty" min="0">
+                    <button onclick="addToCart('Valsartan', 0.9, 'valsartanQty')">Add to Cart</button>
+                </div>
+                <div class="medicine-item">
+                    <label>Enalapril ($2.56): </label>
+                    <input type="number" id="enalaprilQty" min="0">
+                    <button onclick="addToCart('Enalapril', 2.56, 'enalaprilQty')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Cost</td>
+                        <td colspan="2" id="totalCost">$0</td>
+                    </tr>
+                </tfoot>
+            </table></center>
+            <div class="controllers">
+            <button onclick="saveFavorites()">Save as Favorites</button>
+            <button onclick="applyFavorites()">Apply Favorites</button>
+            </div>
+            <div class="Buy-now">
+            <button onclick="proceedToCheckout()"><a href="Checkout page.html">Buy Now</a></button>
+            </div>
+        </section>
+    </main>
+    <script src="Jsscript.js"></script>
                 </div>
             </form>
         </section>
